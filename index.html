@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark light" />
+    <title>Vibe AI 资料站｜首页</title>
+    <meta
+      name="description"
+      content="现代风格 AI 产品资料网站首页：导航、最新资讯、资料库与页脚。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到正文</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true"></div>
+          <div class="brand-text">
+            <div class="brand-name">Vibe AI</div>
+            <div class="brand-sub">产品资料库</div>
+          </div>
+        </div>
+
+        <nav class="nav" aria-label="主导航">
+          <a class="nav-link is-active" href="#home">首页</a>
+          <a class="nav-link" href="#news">最新资讯</a>
+          <a class="nav-link" href="#library">资料库</a>
+          <a class="nav-link" href="#footer">关于</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="btn btn-ghost" id="themeToggle" type="button" aria-label="切换主题">
+            <span class="btn-icon" aria-hidden="true">◐</span>
+            <span class="btn-text">主题</span>
+          </button>
+          <a class="btn btn-primary" href="#library">
+            <span class="btn-icon" aria-hidden="true">↗</span>
+            <span class="btn-text">进入资料库</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="home">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <div class="pill">
+              <span class="pill-dot" aria-hidden="true"></span>
+              <span>每日更新 · AI 产品与研究资料</span>
+            </div>
+            <h1 class="hero-title">
+              把 AI 资料整理成
+              <span class="gradient-text">可检索的知识库</span>
+            </h1>
+            <p class="hero-desc">
+              聚合产品介绍、研究报告、模型评测、最佳实践与行业动态。用更少时间找到关键资料，用更快速度做出决策。
+            </p>
+
+            <div class="hero-search" role="search" aria-label="站内搜索">
+              <div class="search-field">
+                <span class="search-icon" aria-hidden="true">⌕</span>
+                <input
+                  id="q"
+                  class="search-input"
+                  type="search"
+                  placeholder="搜索资料库：例如 “RAG 评测” / “多模态” / “Agent”"
+                  autocomplete="off"
+                />
+                <button class="btn btn-primary btn-compact" id="searchBtn" type="button">
+                  搜索
+                </button>
+              </div>
+              <div class="quick-tags" aria-label="快捷标签">
+                <button class="chip is-selected" type="button" data-tag="全部">全部</button>
+                <button class="chip" type="button" data-tag="研究">研究</button>
+                <button class="chip" type="button" data-tag="产品">产品</button>
+                <button class="chip" type="button" data-tag="教程">教程</button>
+                <button class="chip" type="button" data-tag="工具">工具</button>
+              </div>
+              <div class="hero-meta" id="heroMeta" aria-live="polite"></div>
+            </div>
+          </div>
+
+          <div class="hero-panel" aria-label="亮点概览">
+            <div class="panel-card panel-glow">
+              <div class="panel-head">
+                <div class="panel-title">本周趋势</div>
+                <div class="panel-badge">实时</div>
+              </div>
+              <div class="panel-body">
+                <div class="metric">
+                  <div class="metric-value" id="metricValue">+38%</div>
+                  <div class="metric-label">资料新增（7天）</div>
+                </div>
+                <div class="spark" aria-hidden="true">
+                  <span style="height: 38%"></span>
+                  <span style="height: 54%"></span>
+                  <span style="height: 44%"></span>
+                  <span style="height: 72%"></span>
+                  <span style="height: 63%"></span>
+                  <span style="height: 78%"></span>
+                  <span style="height: 86%"></span>
+                </div>
+
+                <div class="panel-list" aria-label="热门主题">
+                  <div class="panel-item">
+                    <span class="dot dot-a" aria-hidden="true"></span>
+                    <span>RAG 评测与检索优化</span>
+                  </div>
+                  <div class="panel-item">
+                    <span class="dot dot-b" aria-hidden="true"></span>
+                    <span>多模态 Agent 工作流</span>
+                  </div>
+                  <div class="panel-item">
+                    <span class="dot dot-c" aria-hidden="true"></span>
+                    <span>推理加速与成本分析</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel-card">
+              <div class="panel-head">
+                <div class="panel-title">快捷入口</div>
+              </div>
+              <div class="panel-grid" role="list">
+                <a class="mini" href="#library" role="listitem">
+                  <div class="mini-icon" aria-hidden="true">▦</div>
+                  <div class="mini-title">资料总览</div>
+                  <div class="mini-desc">按类型与标签浏览</div>
+                </a>
+                <a class="mini" href="#news" role="listitem">
+                  <div class="mini-icon" aria-hidden="true">✦</div>
+                  <div class="mini-title">每日资讯</div>
+                  <div class="mini-desc">精选更新与摘要</div>
+                </a>
+                <a class="mini" href="#library" role="listitem">
+                  <div class="mini-icon" aria-hidden="true">⌁</div>
+                  <div class="mini-title">模型对比</div>
+                  <div class="mini-desc">快速看差异与结论</div>
+                </a>
+                <a class="mini" href="#footer" role="listitem">
+                  <div class="mini-icon" aria-hidden="true">⟡</div>
+                  <div class="mini-title">订阅</div>
+                  <div class="mini-desc">邮件/RSS/通知</div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="news">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <h2 class="section-title">最新资讯</h2>
+              <p class="section-sub">
+                以“能落地”为标准，筛掉噪音，只保留你值得点开的更新。
+              </p>
+            </div>
+            <div class="section-actions">
+              <button class="btn btn-ghost" id="refreshNews" type="button">
+                <span class="btn-icon" aria-hidden="true">⟲</span>
+                <span class="btn-text">刷新</span>
+              </button>
+              <a class="btn btn-outline" href="#library">
+                <span class="btn-text">去资料库筛选</span>
+                <span class="btn-icon" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid news-grid" id="newsGrid" aria-label="资讯列表"></div>
+        </div>
+      </section>
+
+      <section class="section" id="library">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <h2 class="section-title">资料库展示区</h2>
+              <p class="section-sub">
+                研究 / 产品 / 教程 / 工具 一站式汇总。支持搜索与标签过滤。
+              </p>
+            </div>
+            <div class="section-actions">
+              <div class="kpi" aria-label="统计信息">
+                <div class="kpi-item">
+                  <div class="kpi-num" id="kpiTotal">—</div>
+                  <div class="kpi-label">条资料</div>
+                </div>
+                <div class="kpi-item">
+                  <div class="kpi-num" id="kpiUpdated">—</div>
+                  <div class="kpi-label">本周更新</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="filters">
+            <div class="filters-left">
+              <div class="segmented" aria-label="类型筛选">
+                <button class="seg is-selected" type="button" data-type="全部">全部</button>
+                <button class="seg" type="button" data-type="研究">研究</button>
+                <button class="seg" type="button" data-type="产品">产品</button>
+                <button class="seg" type="button" data-type="教程">教程</button>
+                <button class="seg" type="button" data-type="工具">工具</button>
+              </div>
+            </div>
+            <div class="filters-right">
+              <label class="select">
+                <span class="sr-only">排序</span>
+                <select id="sortBy">
+                  <option value="updated_desc">按更新（新→旧）</option>
+                  <option value="stars_desc">按收藏（高→低）</option>
+                  <option value="read_desc">按阅读（高→低）</option>
+                </select>
+              </label>
+            </div>
+          </div>
+
+          <div class="grid library-grid" id="libraryGrid" aria-label="资料库列表"></div>
+
+          <div class="empty" id="emptyState" hidden>
+            <div class="empty-title">没有匹配的资料</div>
+            <div class="empty-sub">尝试清空搜索词或切换标签/类型。</div>
+            <button class="btn btn-primary" id="clearFilters" type="button">清空筛选</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="footer">
+      <div class="container footer-inner">
+        <div class="footer-left">
+          <div class="brand brand-footer">
+            <div class="brand-mark" aria-hidden="true"></div>
+            <div class="brand-text">
+              <div class="brand-name">Vibe AI</div>
+              <div class="brand-sub">把资料变成知识</div>
+            </div>
+          </div>
+          <p class="footer-note">
+            这是一个示例首页原型（静态前端）。你可以把数据源替换成真实接口或 CMS。
+          </p>
+          <form class="subscribe" id="subscribeForm">
+            <label class="sr-only" for="email">订阅邮箱</label>
+            <input
+              id="email"
+              class="subscribe-input"
+              type="email"
+              placeholder="输入邮箱，获取每周精选"
+              required
+            />
+            <button class="btn btn-primary" type="submit">订阅</button>
+          </form>
+          <div class="subscribe-hint" id="subscribeHint" aria-live="polite"></div>
+        </div>
+
+        <div class="footer-links" aria-label="页脚链接">
+          <div class="link-col">
+            <div class="link-title">产品</div>
+            <a href="#library">资料库</a>
+            <a href="#news">资讯</a>
+            <a href="#home">搜索</a>
+          </div>
+          <div class="link-col">
+            <div class="link-title">资源</div>
+            <a href="#library">研究报告</a>
+            <a href="#library">模型评测</a>
+            <a href="#library">教程指南</a>
+          </div>
+          <div class="link-col">
+            <div class="link-title">联系</div>
+            <a href="javascript:void(0)">合作投稿</a>
+            <a href="javascript:void(0)">问题反馈</a>
+            <a href="javascript:void(0)">隐私与条款</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <div class="muted">© <span id="year"></span> Vibe AI. All rights reserved.</div>
+        <div class="muted">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span id="statusText">前端原型已就绪</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./main.js" defer></script>
+  </body>
+</html>
